@@ -105,7 +105,6 @@ document.getElementById('search_close_modal').addEventListener('click', function
 
 
 document.getElementById('search_input').addEventListener('keypress', function(search) {
-  const spisok = ['Дербентский маяк', 'Кырхляр', 'Парк имени Низами Гянджеви', 'Дербентская стена', 'Нарын-кала', 'Домик Петра I.', 'Келе-Нумаз', 'Церковь Святого Всеспасителя', 'Дербентская Джума-мечеть'];
   const cardIds = ['1','2', '3', '4', '5', '6', '7', '8', '9', '10'];
   if (search.key === 'Enter') {
     const inputValue = this.value.trim(); // Получаем значение из поля ввода
