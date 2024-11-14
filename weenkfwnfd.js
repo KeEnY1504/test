@@ -59,7 +59,6 @@
 
 
 
-fetch('https://6729b8f86d5fa4901b6e13bc.mockapi.io/attractions')
 // .then(Response => Response.json())
 // .then(attractions => {
 //   console.log(attractions.map(attraction => attraction.name));
@@ -160,6 +159,8 @@ document.querySelectorAll('.card').forEach(card => {
     nextIndex(cardId); // Вызываем функцию переноса
   });
 });
+
+
 
 
 

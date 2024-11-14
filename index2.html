@@ -4,66 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            width: 100%;
-            margin: 0;
-        }
-        .modal{
-            margin: 20px auto;
-            width: 70%;
-            height: 900px;
-            background-color: rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5%;
-        }
-    </style>
-        <script>
-            fetch ('https://6729b8f86d5fa4901b6e13bc.mockapi.io/attractions')
-            // Функция для получения параметра из URL
-            function getQueryParameter(name) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(name);
-            }
-    
-            window.onload = function() {
-                const cardId = getQueryParameter('id');
-                if (cardId) {
-                    fetch(`https://6729b8f86d5fa4901b6e13bc.mockapi.io/attractions/${cardId}`, {
-                        mode: 'cors',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(attraction => renderAttractionDetails(attraction))
-                    .catch(error => console.error('Ошибка загрузки данных:', error));
-                }
-            };
-    
-            function renderAttractionDetails(attraction) {
-                const attractionDetails = document.getElementById('modal');
-                attractionDetails.innerHTML = `
-                    <h1>${attraction.name}</h1>
-                    <div class="modal__box">
-                        <div class="modal__box-img">
-                            <img src="${attraction.img}" alt="">
-                        </div>
-                    </div>
-                `;
-            }       
-
-    
-    
-        </script>
+    <link rel="stylesheet" href="./aswtts/css/style.css">
+    <script src="script2.js" defer></script>
 </head>
 <body>
+    <button id="button">&blacktriangleleft;</button>
     <!-- Ваша страница здесь -->
     <div class="modal" id="modal">
     </div>
-    
 </body>
 </html>
